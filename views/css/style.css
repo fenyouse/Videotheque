@@ -1,0 +1,153 @@
+html, body
+	{
+        width: 100%;
+		height: 100%;
+        
+	}
+	
+body
+	{
+        width: 100%;
+        
+		padding: 0px;
+        margin: 0px;
+        
+		background-image:url(../images/font/lama.jpg);
+        background-attachment: fixed;
+	}
+#container
+    {   
+        margin: auto 0;
+        width: 1080px;
+    }
+	
+#header_background
+    {
+        top: 0px;
+        width: 100%;
+        background: #6E6655;
+        border-bottom-right-radius: 70px 14px;
+        border-bottom-left-radius:  70px 14px;
+    }
+#header
+    {
+        margin: auto;
+        width: 1380px;
+        height: 100px;
+    }
+
+#header #titre
+    {
+        float: left;
+    }
+
+#header #menu ul li
+    {
+        margin: 1.45rem;
+        float: left;
+        text-decoration:none; 
+    }
+
+
+.article
+    {
+        margin:25px auto 50px auto;
+        
+        width: 1080px;
+        
+        display:flex;
+        
+        background-color: rgba(255,255,255,0.94);
+       
+        border: solid 1px gray;
+        border-radius: 10px;
+    }
+
+.content_gauche
+    {
+        width: 540px;
+        
+        float: left;
+        
+        border-right: solid 1px gray;
+    }
+.content_gauche .info_image
+    {
+        margin-left: 50px;
+    }
+
+.content_gauche .images
+    {
+        margin:25px auto 50px auto;
+        border: solid 5px gray;
+        border-radius: 5px;
+        width: 450px;
+        
+        
+    }
+.content_gauche .images img
+    {
+        width: 100%;
+    }
+
+
+.content_droite
+    {
+        width: 530px;
+        float: left;
+        
+    }
+
+.clear { clear: both;}
+.inscription {
+        margin-left: 40%;
+        margin-top: 0%;
+        margin-bottom: 15%;
+        width: 20%;
+        
+        
+        background-color: white;
+       
+        border: solid 1px gray;
+        border-radius: 10px;
+}
+
+.profil {
+    margin-left: 28%;
+    margin-top: 10%;
+    margin-bottom: 10%
+}
+
+
+facebook_head {
+    position: absolute;
+    right: 250px;
+    top: 20px;
+}
+
+twitter_head {
+    position: absolute;
+    right: 250px;
+    top: 50px;
+}
+
+twitter {
+    position: relative;
+    left: 150px;
+}
+
+facebook {
+    position: relative;
+    top:-25px;
+}
+
+#social {
+ margin-left: 2px;   
+}
+
+social_head {
+    float:right;
+    right : -200px;
+    top: -70px;
+    position: relative;
+}
