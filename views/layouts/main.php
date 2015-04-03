@@ -2,7 +2,7 @@
 <html>
   <head>
       <meta http-equiv="Content-Type" content="charset=utf-8" />
-      <title>Impose ta connerie</title>
+      <title>Videotheque</title>
       <meta name="keywords" content="" />
       <meta name="description" content="" />
     
@@ -20,22 +20,20 @@
       <div id="header_background">
         <div id="header" >
             <div id="titre">
-                <h1><a href="<?php echo $app->urlFor('images') ?>">Impose Ta Connerie</a></h1>
+                <h1><a href="<?php echo $app->urlFor('images') ?>">Videotheque</a></h1>
             </div>
 
             <div id="menu">
-                <ul>
-                    <li><a href="<?php echo $app->urlFor('images') ?>" title="Images" class="icon-camera-retro icon-2x"></a></li>
-                    <li><a href="<?php echo $app->urlFor('gifs') ?>"  title="Gifs" class="icon-magic icon-2x"></a></li>
-                    <li><a href="<?php echo $app->urlFor('videos') ?>" title="Vidéos" class="icon-facetime-video icon-2x"></a></li>
-                    
-                    <?php 
-                        if(isset($_SESSION['id_utilisateur'])>0)
-                    { 
-                    ?>
+                
+                <?php 
+                    if(isset($_SESSION['id_utilisateur'])>0)
+                { 
+                ?>
+                    <ul>
+                        <li><a href="<?php echo $app->urlFor('Bibliotheque') ?>" title="Bibliotheque"> Bibliotheque</a></li>
                         <li><a href="<?php echo $app->urlFor('deconnexion') ?>" >Déconnection</a></li>
                         <li><a href="<?php echo $app->urlFor('profil') ?>">Profil</a></li>
-                </ul>
+                    </ul>
                 <?php
                    }
                     else{ 
@@ -65,17 +63,6 @@
                     }
                 ?>
                 
-                <social_head><twitter_head><a href="https://twitter.com/ImposeTC" class="twitter-follow-button" data-show-count="false" data-size="medium">Follow @ImposeTC</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></twitter_head>
-                <facebook_head><div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=1494049274210999&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-                <div class="fb-share-button" data-href="https://www.facebook.com/ImposeTaConnerie" data-layout="button"></div></facebook_head></social_head>
 
             </div>
         </div>

@@ -32,10 +32,8 @@ $app = new \Slim\Slim(array(
 
   // GET /
   $app->get('/', function() use ($app) {
-    $image = Image::all();
     $app->render(
-        'index_images.php',
-        array("image"=>$image)
+        'index_images.php'
     );
   })->name('root');
 
