@@ -76,14 +76,36 @@
             }
             
         }
-        
-        
-         public static function Update($pseudo, $nom, $prenom){
+         public static function UpdateIdentite($pseudo, $nom, $prenom){
 
             $pseudo = $_POST['pseudo'];
             $nom = $_POST['nom'];
             $prenom = $_POST['prenom'];
+
+
+
         }
+
+
+        public static function UpdateMDP($Oldmdp, $mdp, $mdp_confirm){
+
+            $Oldmdp = $_POST['Oldmdp'];
+            $mdp = $_POST['mdp'];
+            $mdp_comfirm = $_POST['mdp_confirm'];
+
+
+
+        }
+
+
+        public static function UpdateEmail($mail, $mail_confirm){
+
+            $mail = $_POST['mail'];
+            $mail_comfirm = $_POST['mail_confirm'];
+
+
+        }
+
 
         public static function UploadImage($Titre, $Files){
 
@@ -123,6 +145,48 @@
         }
 
 
+
+
+        public static function UploadGif($titre, $Files){
+
+            $titre = $_POST['Titre'];
+            $Files = $_FILES['Gif'];
+
+            $bdd = DB::connexion_bdd();
+            if (isset($Files) AND $Files['error'] == 0)
+            {
+                    // Testons si le fichier n'est pas trop gros
+                    if ($Files['size'] <= 2000000)
+                    {
+                            // Testons si l'extension est autorisée
+                            $infosfichier = pathinfo($Files['name']);
+                            $extension_upload = $infosfichier['extension'];
+                            $extensions_autorisees =array('gif', 'mp4');
+                            if (in_array($extension_upload, $extensions_autorisees))
+                            {
+                                    // On peut valider le fichier et le stocker définitivement
+                                    move_uploaded_file($Files['tmp_name'], 'views/images/gif/' . basename($Files['name']));
+                                    echo "L'envoi a bien été effectué !";
+
+                                    $bdd = DB::connexion_bdd();
+                                    $req = $bdd->prepare('INSERT INTO gif (titre, nom_image, auteur) VALUES(?,?,?)');
+                                    $req->execute(array(
+                                        $titre,
+                                        $Files['name'],
+                                        $_SESSION['Pseudo']
+                                    ));
+
+
+                            }
+                            else echo "Fichier n'est pas un Gif";
+                    }
+                    else echo "Fichier trop gros";
+            }
+        }
+
+
+
+
         public static function UploadVideo($titre, $Files){
 
             $titre = $_POST['Titre'];
@@ -138,6 +202,25 @@
             ));
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
