@@ -19,7 +19,7 @@
 -moz-box-sizing: border-box;    /* Firefox, other Gecko */
 box-sizing: border-box;         /* Opera/IE 8+ */
 }
-a{color:#47D69E;outline:0;text-decoration:none;}
+a{color:#1EAEDB;outline:0;text-decoration:none;}
 a:active{color:#255753;}
 a:visited{}
 a:hover{}

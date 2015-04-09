@@ -18,9 +18,9 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"]{
 position:relative;
-top:0;
-left:0;
-vertical-align: middle;
+top:;
+left:;
+vertical-align: right;
 margin:0;
 padding:10px 15px;
 line-height:100%;
@@ -74,12 +74,13 @@ input[type="button"]{*padding:7px 15px;}/*IE 7 ONLY*/
 	button.disabled, a.btn.disabled,
 button.tooltip.medium.pill {
  margin-top: 35px;
- margin-left: 15px;
+ margin-right: 555px;
 }
 button.disabled, a.btn.disabled,
 button.tooltip.medium.pill {
+ position: absolute;
  margin-top: 35px;
- margin-left: 15px;
+ margin-right: 55px;
 }
 a.button.disabled{color:#ccc;cursor:default;background:#efefef;}
 	button.disabled:hover, a.btn.disabled:hover, a.button.disabled:hover{border:1px solid #ccc;background:#efefef;}
@@ -250,7 +251,7 @@ input[type=button].blue{
 text-shadow:0 -1px 0 #1D6DC1;
 color:#fff;
 border:1px solid #1D6DC1;
-background: rgb(122,188,255); /* Old browsers */
+background: rgb(122,188,255);
 background: -moz-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,188,255,1)), color-stop(44%,rgba(96,171,248,1)), color-stop(100%,rgba(64,150,238,1))); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10+,Safari5.1+ */
@@ -264,7 +265,7 @@ background: linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,r
 	a.button.blue:hover{
 	text-shadow:0 1px 0 #1D6DC1;
 	border:1px solid #1D6DC1;
-	background: rgb(155,205,255); /* Old browsers */
+	background: rgb(155,205,255); 
 	background: -moz-linear-gradient(top, rgba(155,205,255,1) 0%, rgba(134,192,250,1) 44%, rgba(110,176,242,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(155,205,255,1)), color-stop(44%,rgba(134,192,250,1)), color-stop(100%,rgba(110,176,242,1))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top, rgba(155,205,255,1) 0%,rgba(134,192,250,1) 44%,rgba(110,176,242,1) 100%); /* Chrome10+,Safari5.1+ */
