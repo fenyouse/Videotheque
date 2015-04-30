@@ -30,7 +30,7 @@
                 { 
                 ?>
                     <ul>
-                        <li><a href="<?php echo $app->urlFor('Bibliotheque') ?>" title="Bibliotheque"> Bibliotheque</a></li>
+                        <li><a href="<?php echo $app->urlFor('Bibliotheque') ?>"> Bibliotheque</a></li>
                         <li><a href="<?php echo $app->urlFor('deconnexion') ?>" >Déconnection</a></li>
                         <li><a href="<?php echo $app->urlFor('profil') ?>">Profil</a></li>
                     </ul>

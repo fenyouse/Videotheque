@@ -115,6 +115,7 @@ $app = new \Slim\Slim(array(
       
   })->name('inscription');
 
+
 //POST inscription.php
 $app->post('/inscription', function () use ($app) {
         user::inscription($_POST['prenom'], $_POST['nom'], $_POST['pseudo'], $_POST['mdp'], $_POST['mdp_confirm'], $_POST['mail'], $_POST['mail_confirm']);
